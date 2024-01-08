@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Practica_1.MainPage">
+    <RefreshView IsRefreshing="False" 
+                 x:Name="Refresh">
+        <ScrollView>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Practica 1" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+            <BoxView Color="Blue"
+                WidthRequest="40"
+                HeightRequest="40"
+                HorizontalOptions="Center"></BoxView>
+            <Ellipse Fill="Red"
+                 WidthRequest="90"
+                 HeightRequest="75"
+                 HorizontalOptions="Center"/>
+            <Image Source="campus.png"
+               Aspect="AspectFit"
+               HorizontalOptions="Center"></Image>
+            <Label Text="Hello,Xamarin.Forms!"
+               FontSize="Large"
+               FontAttributes="Italic"
+               HorizontalTextAlignment="Center"/>
+            <Line X1="40"
+              Y1="0"
+              Y2="120"
+              Stroke="red"
+              HorizontalOptions="Center"/>
+
+            <Path Stroke="Black"
+              Aspect="Uniform"
+              HorizontalOptions="Center"
+              HeightRequest="100"
+              WidthRequest="100"
+              Data="M13.9,16.2
+               L32,16.2 32,31.9 13.9,30.1Z
+               M0,16.2
+               L11.9,16.2 11.9,29.9 0,28.6Z
+               M11.9,2
+               L11.9,14.2 0,14.2 0,3.3Z
+               M32,0
+               L32,14.2 13.9,14.2 13.9,1.8Z" />
+            <Polygon Points="0 48, 0 144, 96 150, 100 0, 192 0, 192 96,
+                 50 96, 48 192, 150 200 144 48"
+                 Fill="Blue"
+                 Stroke="Red"
+                 StrokeThickness="3"
+                 HorizontalOptions="Center" />
+            <Polyline Points="0,0 10,30, 15,0 18,60 23,30 35,30 40,0
+                  43,60 48,30 100,30"
+                      Stroke="red"
+                      HorizontalOptions="Center"/>
+            <Rectangle Fill="Red" 
+            WidthRequest="150"
+            HorizontalOptions="Center"></Rectangle>
+
+            <WebView Source="https://learn.microsoft.com/xamarin/"
+                     VerticalOptions="Center"/>
+
+            <RadioButton Content="Pineapple"     
+            IsChecked="False" />
+            <RadioButton Content="Banana"
+                         IsChecked="False"/>
+            <RadioButton Content="Apple"     
+            IsChecked="False" />
+            <RadioButton Content=""     
+            IsChecked="False" />
+            <Button Text="Refresh"
+                    Clicked="Button_Clicked"/>
+                <SearchBar Placeholder="Enter para buscar" />
+                <SwipeView>
+                    <SwipeView.LeftItems>
+                        <SwipeItems>
+                            <SwipeItem Text="Eliminar"
+                       IconImageSource="eliminar.png"
+                       BackgroundColor="LightPink" />
+                        </SwipeItems>
+                    </SwipeView.LeftItems>
+                    <Label Text="Hola como estas"></Label>
+                </SwipeView>
+                <CheckBox IsChecked="True"
+                          HorizontalOptions="Center"
+                          VerticalOptions="CenterAndExpand"/>
+                <Stepper Minimum="0"
+                         Maximum="10"
+                      Increment="0.1"  
+                         HorizontalOptions="Center"
+                         VerticalOptions="CenterAndExpand"/>
+                <Switch IsToggled="false"
+                HorizontalOptions="Center"
+                  VerticalOptions="CenterAndExpand" />
+                 <DatePicker Format="D"
+                  VerticalOptions="CenterAndExpand" />
+              
+                <Entry Keyboard="Email"
+                       Placeholder="Ingresa el email"
+                       VerticalOptions="CenterAndExpand"/>
+                <Editor VerticalOptions="FillAndExpand"/>
+
+                <ActivityIndicator IsRunning="True"
+                   VerticalOptions="CenterAndExpand" />
+                <ProgressBar Progress=".5"
+             VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+    </ScrollView>
+</RefreshView>
+</ContentPage>
